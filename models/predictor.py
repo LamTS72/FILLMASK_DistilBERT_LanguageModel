@@ -1,3 +1,4 @@
+from SQUAD_DistilBERT_QuestionAnswering.models import predictor
 from preprocessing import Preprocessing
 from transformers import (
     pipeline,
@@ -38,5 +39,5 @@ class Predictor():
             
             
 if __name__ == "main":
-    predict = Predictor()
-    predict.predict("This is a great [MASK].")
+    pred = Predictor()
+    pred.predict("This is a great [MASK].")
