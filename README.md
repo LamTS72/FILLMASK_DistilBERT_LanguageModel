@@ -11,19 +11,41 @@ Dataset: `*imdb*`
 
 Language: `*pytorch*`
 
-## Notes:
+# Project Structure
 
-`data_train.py`: represent the dataset
+This project follows the following folder structure:
 
-`preprocessing.py`: tokenizer dataset, align inputs and labels after tokenized that occur changed length of sentences.
+```
+masklm_root/
+├── config/
+│   └── mask_config.py
+├── data/
+│   └── custom_data.py
+├── models/
+│   ├── preprocessing.py
+│   ├── predictor.py
+│   ├── mask_model.py
+│   └── train.py
+└── main.py
+```
 
-`mask_model.py` :create model
+## Folder Descriptions
 
-`train.py`: train model
+### config/
+- **mask_config.py**: Contains configuration settings for the project, such as hyperparameters and file paths.
 
-`predictor.py`: inference model
+### data/
+- **custom_data.py**: Handles data loading, preprocessing, and dataset management.
 
-`config.py`: hyperparameter config
+### models/
+- **preprocessing.py**: Contains functions for data preprocessing.
+- **predictor.py**: Implements the `Predictor` class for making predictions.
+- **mask_model.py**: Defines the model architecture and utilities.
+- **train.py**: Contains the training loop and functions to train the model.
+
+### main.py
+- The main script to run the project, including loading data, training the model, and making predictions.
+
 
 ## How to use
 
